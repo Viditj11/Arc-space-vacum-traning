@@ -6,7 +6,8 @@
 
 We achieved statistical parity with full RLHF (62.36% on TruthfulQA) on a 27B model using exactly **1.21 GB of VRAM**—a 66x reduction.
 
-![Benchmark Comparison](fig5_benchmark_comparison.png)
+<img width="2542" height="1679" alt="image" src="https://github.com/user-attachments/assets/1a114032-c32d-459f-8546-a1181b3eaea4" />
+
 
 ---
 
