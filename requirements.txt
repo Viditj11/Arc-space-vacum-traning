@@ -1,0 +1,8 @@
+torch
+transformers
+safetensors
+numpy
+huggingface_hub
+tqdm
+mlx; sys_platform == 'darwin'
+mlx-lm; sys_platform == 'darwin'

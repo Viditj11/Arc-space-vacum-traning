@@ -6,8 +6,7 @@
 
 We achieved statistical parity with full RLHF (62.36% on TruthfulQA) on a 27B model using exactly **1.21 GB of VRAM**—a 66x reduction.
 
-<img width="2542" height="1679" alt="image" src="https://github.com/user-attachments/assets/1a114032-c32d-459f-8546-a1181b3eaea4" />
-
+![Benchmark Comparison](fig5_benchmark_comparison.png)
 
 ---
 
@@ -50,13 +49,13 @@ python 3_alpha_fusion.py
 
 ---
 
-## 🖥️ Windows & Linux Support (NVIDIA GPUs)
+## 🖥️ Cross-Platform Magic (Mac, Windows, Linux)
 
-This repository includes **two identical architectural versions**:
-1. **Apple Silicon (Mac):** The default root scripts use `mlx` and `mlx_lm` to fully utilize Apple's Unified Memory architecture.
-2. **Windows & Linux (NVIDIA):** We have provided a full `torch` and `transformers` port inside the `windows_pytorch_version/` directory.
+This repository is built with a **Unified Hardware Detection Engine**. There are no separate folders or complicated instructions.
 
-If you are on an NVIDIA GPU, simply run the scripts inside the `windows_pytorch_version/` directory. The math is identical, but it uses `torch.cuda` for memory mapping and garbage collection.
+Whether you are on an **Apple Silicon Mac**, or a **Windows/Linux PC with an NVIDIA GPU**, simply run the Python scripts exactly as written above. The scripts will automatically detect your operating system and hardware, and route the mathematics to the correct backend (MLX for Apple, PyTorch/CUDA for NVIDIA) under the hood.
+
+The provided `requirements.txt` is also environment-aware and will only install what your specific machine needs.
 
 ---
 
